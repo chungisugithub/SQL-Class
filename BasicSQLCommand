@@ -1,3 +1,5 @@
+show user;
+
 create user boy identified by 1234;
 
 grant resource, connect to boy;
