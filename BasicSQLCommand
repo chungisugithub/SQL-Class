@@ -1,0 +1,13 @@
+create user boy identified by 1234;
+
+grant resource, connect to boy;
+
+SQL> update numbers set num = 10 where num = 8;
+
+select * from numbers order by num desc;
+
+delete from numbers where num = 5;
+
+insert into numbers values(6);
+
+create table numbers(number num);
