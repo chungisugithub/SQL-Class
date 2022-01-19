@@ -1,0 +1,7 @@
+select m.employee_id, m.first_name || ' ' || m.last_name FullName,
+       m.manager_id, n.first_name || ' ' || n.last_name
+ from employees m, employees n
+ where 
+    m.manager_id = n.employee_id
+    and
+    m.employee_id = 164;
