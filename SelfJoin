@@ -1,3 +1,10 @@
+참고사이트
+https://chlee21.tistory.com/58?category=942115
+https://viewa.tistory.com/47
+https://t1.daumcdn.net/cfile/tistory/99DC99395DE50F8A04?original
+https://gent.tistory.com/289
+https://pathas.tistory.com/36
+
 select m.employee_id, m.first_name || ' ' || m.last_name FullName,
        m.manager_id, n.first_name || ' ' || n.last_name
  from employees m, employees n
