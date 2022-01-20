@@ -1,3 +1,35 @@
+create TRIGGER trg_deletedMemberTBL
+    after delete
+    on memberTBL
+    for Each row
+begin
+ insert into deleteMembertbl
+  values(:old.memberID, :old.memberName, :old.memberAddress, sysdate());
+end;
+
+select * from deleteMembertbl;
+select * from Membertbl;
+
+delete from membertbl where memberName = '당탕이';
+
+
+create table deleteMemberTBL (
+    memberID char(8),
+    memberName nchar(8),
+    memberAddress nvarchar2(20),
+    deletedDate date --삭제한 날짜
+);
+
+
+-- 스토어드 프로시저
+select count(*) from memberTBL;
+select count(*) from producttbl;
+
+
+
+
+
+
 drop table memberTBL;
 CREATE TABLE memberTBL -- 회원 테이블
 ( memberID  	CHAR(8) NOT NULL PRIMARY KEY, -- 사용자 아이디(PK)
