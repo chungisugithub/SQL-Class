@@ -1,0 +1,15 @@
+drop table memberTBL;
+CREATE TABLE memberTBL -- 회원 테이블
+( memberID  	CHAR(8) NOT NULL PRIMARY KEY, -- 사용자 아이디(PK)
+  memberName  	NCHAR(8) NOT NULL, -- 이름
+  memberAddress 	NVARCHAR2(20) 
+);
+INSERT INTO memberTBL VALUES('Dang', '당탕이','경기 부천시 중동');
+INSERT INTO memberTBL VALUES('Jee', '지운이', '서울 은평구 증산동');
+INSERT INTO memberTBL VALUES('Han', '한주연', '인천 남구 주안동');
+INSERT INTO memberTBL VALUES('Sang', '상길이', '경기 성남시 분당구');
+
+select memberName, memberAddress FROM shop.membertbl;
+
+
+commit;
