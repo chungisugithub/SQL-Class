@@ -4,6 +4,21 @@ CREATE TABLE memberTBL -- 회원 테이블
   memberName  	NCHAR(8) NOT NULL, -- 이름
   memberAddress 	NVARCHAR2(20) 
 );
+drop table productTBL;
+CREATE TABLE productTBL -- 회원 테이블
+( productName  	NCHAR(8) NOT NULL PRIMARY KEY, -- 사용자 아이디(PK)
+  cost  	number(7) NOT NULL, -- 이름
+  makeDate 	date ,
+  company nvarchar2(5),
+  amount  number(3)NOT NULL
+);
+
+INSERT INTO productTBL VALUES('컴퓨터', 10,'17-01-01', '삼성', 17);
+INSERT INTO productTBL VALUES('세탁기', 20,'18-09-01', 'LG', 3);
+INSERT INTO productTBL VALUES('냉장고', 5,'19-02-01', '대우', 12);
+select * from productTBL;
+commit;
+
 INSERT INTO memberTBL VALUES('Dang', '당탕이','경기 부천시 중동');
 INSERT INTO memberTBL VALUES('Jee', '지운이', '서울 은평구 증산동');
 INSERT INTO memberTBL VALUES('Han', '한주연', '인천 남구 주안동');
